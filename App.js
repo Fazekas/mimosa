@@ -23,6 +23,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import LoginComponent from "./component/LoginComponent";
 
 const App: () => React$Node = () => {
   return (
@@ -46,6 +47,7 @@ const App: () => React$Node = () => {
                 screen and then come back to see your edits.
               </Text>
             </View>
+            <LoginComponent/>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
