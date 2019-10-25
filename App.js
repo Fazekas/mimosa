@@ -12,11 +12,16 @@ import {createAppContainer} from 'react-navigation';
 import LocationComponent from "./component/LocationComponent";
 import FoodSelectionComponent from "./component/FoodSelectionComponent";
 import LoginComponent from "./component/LoginComponent";
+import CreateUserComponent from "./component/CreateUserComponent";
+import HomeComponent from "./component/HomeComponent";
 
 const MainNavigator = createStackNavigator({
-  Login: {screen: LoginComponent},
-  Location: {screen: LocationComponent},
   FoodSelection: {screen: FoodSelectionComponent},
+  Home: {screen: HomeComponent},
+  Login: {screen: LoginComponent},
+  CreateUser: {screen: CreateUserComponent},
+  Location: {screen: LocationComponent},
+
 });
 
 const App = createAppContainer(MainNavigator);
