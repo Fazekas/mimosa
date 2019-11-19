@@ -1,1 +1,7 @@
 # mimosa
+
+#Client ID
+cBOVQIbSUn7qj0jqNd2VTA
+ 
+#API Key
+ `qpT_z7Gmx7cplj0DCUEh6oz-b_3eL_qyiAYT85x6_6Y9tZN6NCh9DxYjkztRpylATmo1u8bj6SURf6gJpNppMfkReuelTpTz4ZcAayU1dEyZlvKDsCH5KC-qGbjFXXYx`
