@@ -28,10 +28,8 @@ const client = new ApolloClient({
 
 export default class App extends Component {
   render() {
-    return (
-      <ApolloProvider client={client}>
-        <AppContainer />
-      </ApolloProvider>
-    );
+    // TODO add the apolloProvider when ready to use yelp
+    // {/*<ApolloProvider client={client}>*/}
+    return <AppContainer />;
   }
 }
