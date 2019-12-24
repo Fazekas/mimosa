@@ -26,25 +26,35 @@ export default class FoodSelectionComponent extends React.Component {
       showNoMoreCardsView: false,
       likedFood: [],
       foodArray: [],
+      renderedArray: [],
     };
   }
 
+  state = { locationText: '', isLoading: false };
+
   componentDidMount() {
-    const foodArray = yelpData.map((foodItem, index) => {
+    let foodArray = yelpData.map((foodItem, index) => {
       foodItem['id'] = index;
       foodItem['image'] = foodItem.photos[0];
       return foodItem;
     });
 
-    this.setState({ foodArray: foodArray });
-  }
+    let arrayToRender = [];
+    if (foodArray.length > 10) {
+      arrayToRender = foodArray.slice(0, 10);
+      foodArray = foodArray.slice(10);
+    } else {
+      arrayToRender = foodArray;
+      foodArray = [];
+    }
 
-  state = { locationText: '', isLoading: false };
+    this.setState({ foodArray: foodArray , renderedArray: arrayToRender});
+  }
 
   likedFood(id) {
     this.setState(prevState => {
       return {
-        likedFood: prevState.likedFood.concat(prevState.foodArray[prevState.foodArray.findIndex(item => item.id === id)]),
+        likedFood: prevState.likedFood.concat(prevState.renderedArray[prevState.renderedArray.findIndex(item => item.id === id)]),
       };
     });
     this.removeFood(id);
@@ -57,15 +67,34 @@ export default class FoodSelectionComponent extends React.Component {
 
   removeFood(id) {
     this.setState(prevState => ({
-      foodArray: prevState.foodArray.filter(foodItem => foodItem.id !== id),
+      renderedArray: prevState.renderedArray.filter(foodItem => foodItem.id !== id),
     }));
+    this.addToRenderedList();
+  }
+
+  // feeds the food array to the renderedList to fix performance
+  addToRenderedList() {
+    if (this.state.renderedArray.length <= 5) {
+      let renderedArray = this.state.renderedArray;
+      let foodArray = this.state.foodArray;
+
+      if (this.state.foodArray.length > 5) {
+        renderedArray = renderedArray.concat(foodArray.slice(0, 5));
+        foodArray = foodArray.slice(5);
+        this.setState({renderedArray: renderedArray, foodArray: foodArray});
+      } else {
+        renderedArray.concat(foodArray);
+        foodArray = [];
+        this.setState({renderedArray: renderedArray, foodArray: foodArray});
+      }
+    }
   }
 
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View>
-        {this.state.foodArray
+        {this.state.renderedArray
           .map(item => (
             <FoodCardComponent
               item={item}
@@ -73,7 +102,7 @@ export default class FoodSelectionComponent extends React.Component {
               likedFood={this.likedFood.bind(this)}
               removeFood={this.removeFood.bind(this)}
             />
-          ))}
+          )).reverse()}
       </View>
     );
   }
