@@ -6,11 +6,13 @@ import CreateUserComponent from './CreateUserComponent';
 import LocationComponent from './LocationComponent';
 import { createAppContainer } from 'react-navigation';
 import FoodListComponent from './FoodListComponent';
+import FoodDetailComponent from "./FoodDetailComponent";
 
 const MainNavigator = createStackNavigator(
   {
     FoodSelection: { screen: FoodSelectionComponent },
     FoodList: { screen: FoodListComponent },
+    FoodDetail: { screen: FoodDetailComponent},
     Home: { screen: HomeComponent },
     Login: { screen: LoginComponent },
     CreateUser: { screen: CreateUserComponent },

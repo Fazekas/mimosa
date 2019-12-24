@@ -134,11 +134,6 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH,
     position: 'absolute',
     padding: 10,
-    // overflow: 'hidden',
-    // borderRadius: 10,
-
-    //  shadow
-    // shadowOpacity: 0.8,
   },
   text: {
     flex: 1,

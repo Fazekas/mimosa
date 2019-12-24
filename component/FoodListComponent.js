@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import StarRatingComponent from "./StarRatingComponent";
 
 export default class FoodListComponent extends Component {
   constructor(props) {
@@ -70,23 +71,13 @@ export default class FoodListComponent extends Component {
     };
   }
 
-  iTouchedIt = key => {
-    console.log('pressed: ' + key);
+  itemPressed = food => {
+    this.props.navigation.navigate('FoodDetail', { selectedFood: food})
   };
-  //
-  // renderStars = (stars) => {
-  //   const emptyStars = Math.ceil(stars) - 5;
-  //   if (stars % 1 !== 0) {
-  //     // return a half star
-  //   }
-  //   return (
-  //
-  //   );
-  // }
 
   renderItems = (food, key) => {
     return (
-      <TouchableHighlight key={key} onPress={this.iTouchedIt}>
+      <TouchableHighlight key={key} onPress={() => this.itemPressed(food)}>
         <View
           style={{
             flexDirection: 'row',
@@ -130,6 +121,7 @@ export default class FoodListComponent extends Component {
               <Text style={styles.boldText}>Rating: </Text>
               <Text>{food.rating}</Text>
             </Text>
+              {/*<StarRatingComponent rating={food.rating}/>*/}
             <Text>
               <Text style={styles.boldText}>Address: </Text>
               <Text>

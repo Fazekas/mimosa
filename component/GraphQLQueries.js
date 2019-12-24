@@ -14,11 +14,21 @@ export const searchQuery = gql`
         name
         url
         photos
+        display_phone
         rating
+        price
         location {
           address1
           state
           city
+        }
+        hours {
+            open {
+                start
+                end
+                day
+            }
+            is_open_now
         }
       }
     }

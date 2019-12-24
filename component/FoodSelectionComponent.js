@@ -25,29 +25,7 @@ export default class FoodSelectionComponent extends React.Component {
       pan: new Animated.ValueXY(),
       showNoMoreCardsView: false,
       likedFood: [],
-      foodArray: [
-        {
-          id: 0,
-          image:
-            'https://media.gettyimages.com/photos/different-types-of-food-on-rustic-wooden-table-picture-id861188910?s=612x612',
-        },
-        {
-          id: 1,
-          image:
-            'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-        },
-        {
-          id: 2,
-          image:
-            'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-        },
-        {
-          id: 3,
-          image:
-            'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-        },
-      ],
-      // foodArray: yelpData,
+      foodArray: [],
     };
   }
 
@@ -66,7 +44,7 @@ export default class FoodSelectionComponent extends React.Component {
   likedFood(id) {
     this.setState(prevState => {
       return {
-        likedFood: prevState.likedFood.concat(this.state.foodArray[id]),
+        likedFood: prevState.likedFood.concat(prevState.foodArray[prevState.foodArray.findIndex(item => item.id === id)]),
       };
     });
     this.removeFood(id);
@@ -95,11 +73,8 @@ export default class FoodSelectionComponent extends React.Component {
               likedFood={this.likedFood.bind(this)}
               removeFood={this.removeFood.bind(this)}
             />
-          ))
-          .reverse()}
+          ))}
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({});

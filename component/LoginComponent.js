@@ -7,7 +7,6 @@ export const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)
 export default class LoginComponent extends Component {
   constructor(props) {
     super(props);
-    console.log('hello');
     this.state = {email: '', password: '', isLogin: false};
   }
 
