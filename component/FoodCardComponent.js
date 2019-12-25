@@ -130,6 +130,7 @@ export default class FoodCardComponent extends Component {
 
 const styles = StyleSheet.create({
   card: {
+      flex: 1,
     height: SCREEN_HEIGHT - 100,
     width: SCREEN_WIDTH,
     position: 'absolute',

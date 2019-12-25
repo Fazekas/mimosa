@@ -1,77 +1,53 @@
 import React, { Component } from 'react';
 import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
+    Alert,
+    BackHandler,
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableHighlight,
+    View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import StarRatingComponent from "./StarRatingComponent";
+import { StackActions, NavigationActions} from "react-navigation";
 
 export default class FoodListComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      // likedFood: [
-      //   {
-      //     id: 0,
-      //     image:
-      //       'https://media.gettyimages.com/photos/different-types-of-food-on-rustic-wooden-table-picture-id861188910?s=612x612',
-      //   },
-      //   {
-      //     id: 1,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 2,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 3,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 4,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 5,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 6,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 7,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 8,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      //   {
-      //     id: 9,
-      //     image:
-      //       'https://assets.myfoodandfamily.com/adaptivemedia/rendition/159271_3000x2000.jpg?id=bc8c1bbde9e3bf467a31ddbd3e33c26581215205&ht=650&wd=1004&clid=pim',
-      //   },
-      // ],
       likedFood: this.props.navigation.getParam('likedFood'),
     };
   }
 
-  itemPressed = food => {
+  componentDidMount() {
+      this.backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+          if (this.props.navigation.isFocused()) {
+              Alert.alert(
+                  '',
+                  'Are you sure you want to go back? Pressing OK will clear your selections.',
+                  [
+                      {text: 'Cancel', style: 'cancel'},
+                      {text: 'OK', onPress: () => {
+                              const resetAction = StackActions.reset({
+                                  index: 0,
+                                  actions: [NavigationActions.navigate({routeName: 'FoodSelection'})]
+                              });
+                              this.props.navigation.dispatch(resetAction);
+                          }}
+                  ]
+              );
+              return true;
+          }
+      });
+  }
+
+  componentWillUnmount() {
+      this.backHandler.remove();
+    }
+
+    itemPressed = food => {
     this.props.navigation.navigate('FoodDetail', { selectedFood: food})
   };
 

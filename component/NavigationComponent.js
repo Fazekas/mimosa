@@ -18,7 +18,7 @@ const MainNavigator = createStackNavigator(
     CreateUser: { screen: CreateUserComponent },
     Location: { screen: LocationComponent },
   },
-  { headerMode: 'none' },
+  { headerMode: 'none', initialRouteName: 'FoodSelection' },
 );
 
 export const AppContainer = createAppContainer(MainNavigator);

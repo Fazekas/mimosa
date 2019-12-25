@@ -93,7 +93,7 @@ export default class FoodSelectionComponent extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
+      <View style={{flex: 1, backgroundColor: '#dcdcdc'}}>
         {this.state.renderedArray
           .map(item => (
             <FoodCardComponent
