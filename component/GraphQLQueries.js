@@ -12,6 +12,23 @@ export const searchQuery = gql`
       total
       business {
         name
+      }
+    }
+  }
+`;
+
+export const realQuery = gql`
+  query {
+    search(
+      latitude: 42.281422
+      longitude: -83.748482
+      radius: 2000
+      limit: 50
+      term: "food"
+    ) {
+      total
+      business {
+        name
         url
         photos
         display_phone
@@ -23,12 +40,12 @@ export const searchQuery = gql`
           city
         }
         hours {
-            open {
-                start
-                end
-                day
-            }
-            is_open_now
+          open {
+            start
+            end
+            day
+          }
+          is_open_now
         }
       }
     }

@@ -6,19 +6,26 @@ import CreateUserComponent from './CreateUserComponent';
 import LocationComponent from './LocationComponent';
 import { createAppContainer } from 'react-navigation';
 import FoodListComponent from './FoodListComponent';
-import FoodDetailComponent from "./FoodDetailComponent";
+import FoodDetailComponent from './FoodDetailComponent';
+import CardStackStyleInterpolator from 'react-navigation-stack/src/views/StackView/StackViewStyleInterpolator';
 
 const MainNavigator = createStackNavigator(
   {
     FoodSelection: { screen: FoodSelectionComponent },
     FoodList: { screen: FoodListComponent },
-    FoodDetail: { screen: FoodDetailComponent},
+    FoodDetail: { screen: FoodDetailComponent },
     Home: { screen: HomeComponent },
     Login: { screen: LoginComponent },
     CreateUser: { screen: CreateUserComponent },
     Location: { screen: LocationComponent },
   },
-  { headerMode: 'none', initialRouteName: 'FoodSelection' },
+  {
+    headerMode: 'none',
+    initialRouteName: 'FoodSelection',
+    transitionConfig: () => ({
+      screenInterpolator: CardStackStyleInterpolator.forHorizontal,
+    }),
+  },
 );
 
 export const AppContainer = createAppContainer(MainNavigator);

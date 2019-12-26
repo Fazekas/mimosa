@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Image,
   Text,
+  View,
 } from 'react-native';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
@@ -53,7 +54,9 @@ export default class FoodCardComponent extends Component {
         },
       ]),
       onPanResponderRelease: (e, gesture) => {
-        if (gesture.dy > SCREEN_HEIGHT / 3) {
+        if (gesture.dx < -125) {
+          this.props.goToNextScreen();
+        } else if (gesture.dy > SCREEN_HEIGHT / 3) {
           Animated.parallel([
             Animated.timing(this.state.pan.y, {
               toValue: SCREEN_HEIGHT,
@@ -95,34 +98,36 @@ export default class FoodCardComponent extends Component {
           styles.card,
           { opacity: this.cardOpacity },
         ]}>
-        <Image
-          style={{
-            flex: 1,
-            borderRadius: 10,
-            height: null,
-            width: null,
-            resizeMode: 'cover',
-          }}
-          source={{
-            uri: this.props.item.image,
-          }}
-        />
-        <Animated.View
-          style={[
-            styles.textContainer,
-            styles.likeContainer,
-            { opacity: this.likeOpacity },
-          ]}>
-          <Text style={[styles.text, styles.like]}>LIKE</Text>
-        </Animated.View>
-        <Animated.View
-          style={[
-            styles.textContainer,
-            styles.dislikeContainer,
-            { opacity: this.dislikeOpacity },
-          ]}>
-          <Text style={[styles.text, styles.disLike]}>DISLIKE</Text>
-        </Animated.View>
+        <View style={{ elevation: 2, flex: 1, borderRadius: 10 }}>
+          <Image
+            style={{
+              flex: 1,
+              borderRadius: 10,
+              height: null,
+              width: null,
+              resizeMode: 'cover',
+            }}
+            source={{
+              uri: this.props.item.image,
+            }}
+          />
+          <Animated.View
+            style={[
+              styles.textContainer,
+              styles.likeContainer,
+              { opacity: this.likeOpacity },
+            ]}>
+            <Text style={[styles.text, styles.like]}>LIKE</Text>
+          </Animated.View>
+          <Animated.View
+            style={[
+              styles.textContainer,
+              styles.dislikeContainer,
+              { opacity: this.dislikeOpacity },
+            ]}>
+            <Text style={[styles.text, styles.disLike]}>DISLIKE</Text>
+          </Animated.View>
+        </View>
       </Animated.View>
     );
   }
@@ -130,8 +135,8 @@ export default class FoodCardComponent extends Component {
 
 const styles = StyleSheet.create({
   card: {
-      flex: 1,
-    height: SCREEN_HEIGHT - 100,
+    flex: 1,
+    height: SCREEN_HEIGHT,
     width: SCREEN_WIDTH,
     position: 'absolute',
     padding: 10,
@@ -163,7 +168,7 @@ const styles = StyleSheet.create({
     flex: 1,
     position: 'absolute',
     padding: 10,
-    left: SCREEN_WIDTH / 2 - 50,
+    alignSelf: 'center',
     textAlign: 'center',
   },
 });

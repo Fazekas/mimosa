@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import {
-    Alert,
-    BackHandler,
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableHighlight,
-    View,
+  Alert,
+  BackHandler,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { StackActions, NavigationActions} from "react-navigation";
+import { StackActions, NavigationActions } from 'react-navigation';
 
 export default class FoodListComponent extends Component {
   constructor(props) {
@@ -22,33 +22,41 @@ export default class FoodListComponent extends Component {
   }
 
   componentDidMount() {
-      this.backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
-          if (this.props.navigation.isFocused()) {
-              Alert.alert(
-                  '',
-                  'Are you sure you want to go back? Pressing OK will clear your selections.',
-                  [
-                      {text: 'Cancel', style: 'cancel'},
-                      {text: 'OK', onPress: () => {
-                              const resetAction = StackActions.reset({
-                                  index: 0,
-                                  actions: [NavigationActions.navigate({routeName: 'FoodSelection'})]
-                              });
-                              this.props.navigation.dispatch(resetAction);
-                          }}
-                  ]
-              );
-              return true;
-          }
-      });
+    this.backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (this.props.navigation.isFocused()) {
+        const reset = () => {
+          const resetAction = StackActions.reset({
+            index: 0,
+            actions: [
+              NavigationActions.navigate({ routeName: 'FoodSelection' }),
+            ],
+          });
+          this.props.navigation.dispatch(resetAction);
+        };
+
+        if (this.state.likedFood.length) {
+          Alert.alert(
+            '',
+            'Are you sure you want to go back? Pressing OK will clear your selections.',
+            [
+              { text: 'Cancel', style: 'cancel' },
+              { text: 'OK', onPress: () => reset() },
+            ],
+          );
+        } else {
+          reset();
+        }
+        return true;
+      }
+    });
   }
 
   componentWillUnmount() {
-      this.backHandler.remove();
-    }
+    this.backHandler.remove();
+  }
 
-    itemPressed = food => {
-    this.props.navigation.navigate('FoodDetail', { selectedFood: food})
+  itemPressed = food => {
+    this.props.navigation.navigate('FoodDetail', { selectedFood: food });
   };
 
   renderItems = (food, key) => {
@@ -97,7 +105,7 @@ export default class FoodListComponent extends Component {
               <Text style={styles.boldText}>Rating: </Text>
               <Text>{food.rating}</Text>
             </Text>
-              {/*<StarRatingComponent rating={food.rating}/>*/}
+            {/*<StarRatingComponent rating={food.rating}/>*/}
             <Text>
               <Text style={styles.boldText}>Address: </Text>
               <Text>
@@ -115,13 +123,32 @@ export default class FoodListComponent extends Component {
   };
 
   render() {
-    return (
-      <ScrollView>
-        {this.state.likedFood.map((food, key) => {
-          return this.renderItems(food, key);
-        })}
-      </ScrollView>
-    );
+    if (this.state.likedFood.length) {
+      return (
+        <ScrollView>
+          {this.state.likedFood.map((food, key) => {
+            return this.renderItems(food, key);
+          })}
+        </ScrollView>
+      );
+    } else {
+      return (
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            flex: 1,
+            flexWrap: 'wrap',
+            padding: 40,
+          }}>
+          <Text style={{ fontSize: 24 }}>Uh Oh!</Text>
+          <Text style={{ fontSize: 16 }}>
+            Looks like you did not like any food. Please go back and swipe down
+            on an item
+          </Text>
+        </View>
+      );
+    }
   }
 }
 
