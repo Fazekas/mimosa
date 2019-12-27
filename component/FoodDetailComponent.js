@@ -44,9 +44,7 @@ export default class FoodDetailComponent extends Component {
           onPress: () => {
             const resetAction = StackActions.reset({
               index: 0,
-              actions: [
-                NavigationActions.navigate({ routeName: 'FoodSelection' }),
-              ],
+              actions: [NavigationActions.navigate({ routeName: 'Location' })],
             });
             this.props.navigation.dispatch(resetAction);
           },
@@ -156,10 +154,9 @@ export default class FoodDetailComponent extends Component {
         </View>
       );
     } else {
-      // TODO set this to this.state.selectedFood.is_open_now
       let isOpenStr;
       let timeTillStr;
-      if (true) {
+      if (this.state.selectedFood.hours[0].is_open_now) {
         isOpenStr = 'Open';
         timeTillStr = ` · Closes at ${this.handleTimeStr(true)}`;
       } else {
@@ -186,7 +183,7 @@ export default class FoodDetailComponent extends Component {
         <View style={[styles.card, styles.informationCard]}>
           <View style={{ flex: 1 }}>
             <Image
-              source={{ uri: this.state.selectedFood.image }}
+              source={this.state.selectedFood.image}
               style={styles.foodImage}
             />
           </View>

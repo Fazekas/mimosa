@@ -12,7 +12,7 @@ import { Platform } from 'react-native';
 import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
     uri: Platform.select({
@@ -28,8 +28,10 @@ const client = new ApolloClient({
 
 export default class App extends Component {
   render() {
-    // TODO add the apolloProvider when ready to use yelp
-    // {/*<ApolloProvider client={client}>*/}
-    return <AppContainer />;
+    return (
+      <ApolloProvider client={client}>
+        <AppContainer />
+      </ApolloProvider>
+    );
   }
 }

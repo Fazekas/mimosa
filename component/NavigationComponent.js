@@ -21,7 +21,7 @@ const MainNavigator = createStackNavigator(
   },
   {
     headerMode: 'none',
-    initialRouteName: 'FoodSelection',
+    initialRouteName: 'Location',
     transitionConfig: () => ({
       screenInterpolator: CardStackStyleInterpolator.forHorizontal,
     }),

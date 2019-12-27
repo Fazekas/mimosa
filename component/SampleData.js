@@ -14,10 +14,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2803651,
-      longitude: -83.7491532,
-    },
     hours: [
       {
         open: [
@@ -57,6 +53,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -75,10 +72,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.278875,
-      longitude: -83.740044,
-    },
     hours: [],
   },
   {
@@ -95,10 +88,6 @@ export const yelpData = [
       address1: '422 Detroit St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2844740041972,
-      longitude: -83.7452775306885,
     },
     hours: [
       {
@@ -139,6 +128,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -157,10 +147,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.27522,
-      longitude: -83.73545,
-    },
     hours: [
       {
         open: [
@@ -200,6 +186,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -217,10 +204,6 @@ export const yelpData = [
       address1: '308 S Ashley St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2791380130444,
-      longitude: -83.7500103937961,
     },
     hours: [
       {
@@ -256,6 +239,7 @@ export const yelpData = [
             day: 5,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -273,10 +257,6 @@ export const yelpData = [
       address1: '407 N 5th Ave',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2843231,
-      longitude: -83.7460385,
     },
     hours: [
       {
@@ -317,6 +297,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -335,10 +316,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2795599,
-      longitude: -83.74278,
-    },
     hours: [
       {
         open: [
@@ -378,67 +355,7 @@ export const yelpData = [
             day: 6,
           },
         ],
-      },
-    ],
-  },
-  {
-    name: 'First Bite',
-    url:
-      'https://www.yelp.com/biz/first-bite-ann-arbor-2?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media4.fl.yelpcdn.com/bphoto/ChCnpT9IkexhkKnhWEAwrw/o.jpg',
-    ],
-    display_phone: '(734) 369-4765',
-    rating: 4.5,
-    price: '$$',
-    location: {
-      address1: '108 S Main St',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2811,
-      longitude: -83.7489,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '0800',
-            end: '1500',
-            day: 0,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 1,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 2,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 3,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 4,
-          },
-          {
-            start: '0900',
-            end: '1500',
-            day: 5,
-          },
-          {
-            start: '0900',
-            end: '1500',
-            day: 6,
-          },
-        ],
+        is_open_now: true,
       },
     ],
   },
@@ -457,10 +374,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2844259637415,
-      longitude: -83.7464853124999,
-    },
     hours: [
       {
         open: [
@@ -500,6 +413,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -518,10 +432,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2843246,
-      longitude: -83.7460403,
-    },
     hours: [
       {
         open: [
@@ -561,6 +471,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -579,10 +490,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.27981,
-      longitude: -83.75034,
-    },
     hours: [
       {
         open: [
@@ -622,6 +529,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -640,10 +548,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2794213,
-      longitude: -83.7483554,
-    },
     hours: [
       {
         open: [
@@ -683,6 +587,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -701,10 +606,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2775307,
-      longitude: -83.7428818,
-    },
     hours: [
       {
         open: [
@@ -744,6 +645,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -762,10 +664,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2796619222548,
-      longitude: -83.7478985264897,
-    },
     hours: [
       {
         open: [
@@ -810,6 +708,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: false,
       },
     ],
   },
@@ -828,10 +727,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2796609300119,
-      longitude: -83.7477365881205,
-    },
     hours: [
       {
         open: [
@@ -871,6 +766,118 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
+      },
+    ],
+  },
+  {
+    name: 'Vedge Cafe',
+    url:
+      'https://www.yelp.com/biz/vedge-cafe-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media2.fl.yelpcdn.com/bphoto/qV58l3ankT2q-VKjkD-euQ/o.jpg',
+    ],
+    display_phone: '(734) 929-4485',
+    rating: 4.5,
+    price: '$',
+    location: {
+      address1: '205 N Main',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '1100',
+            end: '1900',
+            day: 1,
+          },
+          {
+            start: '1100',
+            end: '1900',
+            day: 2,
+          },
+          {
+            start: '1100',
+            end: '1900',
+            day: 3,
+          },
+          {
+            start: '1100',
+            end: '1900',
+            day: 4,
+          },
+          {
+            start: '1100',
+            end: '1800',
+            day: 5,
+          },
+          {
+            start: '1100',
+            end: '1600',
+            day: 6,
+          },
+        ],
+        is_open_now: true,
+      },
+    ],
+  },
+  {
+    name: 'First Bite',
+    url:
+      'https://www.yelp.com/biz/first-bite-ann-arbor-2?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media4.fl.yelpcdn.com/bphoto/ChCnpT9IkexhkKnhWEAwrw/o.jpg',
+    ],
+    display_phone: '(734) 369-4765',
+    rating: 4.5,
+    price: '$$',
+    location: {
+      address1: '108 S Main St',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '0800',
+            end: '1500',
+            day: 0,
+          },
+          {
+            start: '0800',
+            end: '1500',
+            day: 1,
+          },
+          {
+            start: '0800',
+            end: '1500',
+            day: 2,
+          },
+          {
+            start: '0800',
+            end: '1500',
+            day: 3,
+          },
+          {
+            start: '0800',
+            end: '1500',
+            day: 4,
+          },
+          {
+            start: '0900',
+            end: '1500',
+            day: 5,
+          },
+          {
+            start: '0900',
+            end: '1500',
+            day: 6,
+          },
+        ],
+        is_open_now: false,
       },
     ],
   },
@@ -889,10 +896,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2795149,
-      longitude: -83.7425726,
-    },
     hours: [
       {
         open: [
@@ -932,6 +935,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -950,10 +954,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.27919,
-      longitude: -83.74589,
-    },
     hours: [
       {
         open: [
@@ -993,6 +993,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1011,10 +1012,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.279605,
-      longitude: -83.7409649,
-    },
     hours: [
       {
         open: [
@@ -1054,6 +1051,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1072,10 +1070,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.27914,
-      longitude: -83.74824,
-    },
     hours: [
       {
         open: [
@@ -1115,6 +1109,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1132,10 +1127,6 @@ export const yelpData = [
       address1: '312 S State St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.278953,
-      longitude: -83.74103,
     },
     hours: [
       {
@@ -1176,6 +1167,60 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
+      },
+    ],
+  },
+  {
+    name: 'Detroit Street Filling Station',
+    url:
+      'https://www.yelp.com/biz/detroit-street-filling-station-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media2.fl.yelpcdn.com/bphoto/xTG8JAyGPy2UTmYy5H7Lrw/o.jpg',
+    ],
+    display_phone: '(734) 224-2161',
+    rating: 4.0,
+    price: '$$',
+    location: {
+      address1: '300 Detroit St',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '1100',
+            end: '2100',
+            day: 1,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 2,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 3,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 4,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 5,
+          },
+          {
+            start: '1000',
+            end: '1500',
+            day: 6,
+          },
+        ],
+        is_open_now: true,
       },
     ],
   },
@@ -1194,10 +1239,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Detroit',
     },
-    coordinates: {
-      latitude: 42.2847945,
-      longitude: -83.7452093,
-    },
     hours: [
       {
         open: [
@@ -1217,6 +1258,60 @@ export const yelpData = [
             day: 5,
           },
         ],
+        is_open_now: false,
+      },
+    ],
+  },
+  {
+    name: 'Isalita',
+    url:
+      'https://www.yelp.com/biz/isalita-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media3.fl.yelpcdn.com/bphoto/Kax_19qwZS5tAHhxs5WUsQ/o.jpg',
+    ],
+    display_phone: '(734) 213-7400',
+    rating: 4.0,
+    price: '$$',
+    location: {
+      address1: '341 E Liberty St',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '1130',
+            end: '2200',
+            day: 1,
+          },
+          {
+            start: '1130',
+            end: '2200',
+            day: 2,
+          },
+          {
+            start: '1130',
+            end: '2200',
+            day: 3,
+          },
+          {
+            start: '1130',
+            end: '2300',
+            day: 4,
+          },
+          {
+            start: '1200',
+            end: '2300',
+            day: 5,
+          },
+          {
+            start: '1200',
+            end: '2100',
+            day: 6,
+          },
+        ],
+        is_open_now: true,
       },
     ],
   },
@@ -1235,10 +1330,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2790527910756,
-      longitude: -83.7397096633415,
-    },
     hours: [
       {
         open: [
@@ -1273,6 +1364,7 @@ export const yelpData = [
             day: 5,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1291,10 +1383,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.275187,
-      longitude: -83.732509,
-    },
     hours: [
       {
         open: [
@@ -1334,6 +1422,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1352,10 +1441,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.27847,
-      longitude: -83.7490399,
-    },
     hours: [
       {
         open: [
@@ -1395,6 +1480,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1413,10 +1499,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2794143,
-      longitude: -83.7482449,
-    },
     hours: [
       {
         open: [
@@ -1456,6 +1538,60 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
+      },
+    ],
+  },
+  {
+    name: 'Jerusalem Garden',
+    url:
+      'https://www.yelp.com/biz/jerusalem-garden-ann-arbor-2?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media2.fl.yelpcdn.com/bphoto/tmuVVsqoNEl5WNZ_Ikan4A/o.jpg',
+    ],
+    display_phone: '(734) 995-5060',
+    rating: 4.0,
+    price: '$$',
+    location: {
+      address1: '314 E Liberty St',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '1100',
+            end: '2100',
+            day: 0,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 1,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 2,
+          },
+          {
+            start: '1100',
+            end: '2100',
+            day: 3,
+          },
+          {
+            start: '1100',
+            end: '2130',
+            day: 4,
+          },
+          {
+            start: '1100',
+            end: '2130',
+            day: 5,
+          },
+        ],
+        is_open_now: true,
       },
     ],
   },
@@ -1473,10 +1609,6 @@ export const yelpData = [
       address1: '621 Church St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.27424,
-      longitude: -83.73434,
     },
     hours: [
       {
@@ -1512,6 +1644,7 @@ export const yelpData = [
             day: 5,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1529,10 +1662,6 @@ export const yelpData = [
       address1: '305 S Main St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.279323,
-      longitude: -83.748238,
     },
     hours: [
       {
@@ -1573,62 +1702,7 @@ export const yelpData = [
             day: 6,
           },
         ],
-      },
-    ],
-  },
-  {
-    name: 'Jerusalem Garden',
-    url:
-      'https://www.yelp.com/biz/jerusalem-garden-ann-arbor-2?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media2.fl.yelpcdn.com/bphoto/tmuVVsqoNEl5WNZ_Ikan4A/o.jpg',
-    ],
-    display_phone: '(734) 995-5060',
-    rating: 4.0,
-    price: '$$',
-    location: {
-      address1: '314 E Liberty St',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2792053222656,
-      longitude: -83.7454223632812,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '1100',
-            end: '2100',
-            day: 0,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 1,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 2,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 3,
-          },
-          {
-            start: '1100',
-            end: '2130',
-            day: 4,
-          },
-          {
-            start: '1100',
-            end: '2130',
-            day: 5,
-          },
-        ],
+        is_open_now: true,
       },
     ],
   },
@@ -1646,10 +1720,6 @@ export const yelpData = [
       address1: '403 E Washington St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.28063,
-      longitude: -83.74366,
     },
     hours: [
       {
@@ -1690,57 +1760,65 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
   {
-    name: 'Le Dog',
+    name: 'Aventura',
     url:
-      'https://www.yelp.com/biz/le-dog-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+      'https://www.yelp.com/biz/aventura-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
     photos: [
-      'https://s3-media2.fl.yelpcdn.com/bphoto/pJyzrb7hXCCYysIgOtmg4g/o.jpg',
+      'https://s3-media2.fl.yelpcdn.com/bphoto/dH7DwXscyU-eb9bD2KoiTg/o.jpg',
     ],
-    display_phone: '(734) 327-0091',
+    display_phone: '(734) 369-3153',
     rating: 4.0,
-    price: '$',
+    price: '$$',
     location: {
-      address1: '306 S Main St',
+      address1: '216 E Washington St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2792015075684,
-      longitude: -83.7490081787109,
     },
     hours: [
       {
         open: [
           {
-            start: '1130',
-            end: '1430',
+            start: '1500',
+            end: '0000',
             day: 0,
           },
           {
-            start: '1130',
-            end: '1430',
+            start: '1500',
+            end: '0000',
             day: 1,
           },
           {
-            start: '1130',
-            end: '1430',
+            start: '1500',
+            end: '0000',
             day: 2,
           },
           {
-            start: '1130',
-            end: '1430',
+            start: '1500',
+            end: '0000',
             day: 3,
           },
           {
-            start: '1130',
-            end: '1430',
+            start: '1500',
+            end: '0000',
             day: 4,
           },
+          {
+            start: '1500',
+            end: '0000',
+            day: 5,
+          },
+          {
+            start: '1500',
+            end: '0000',
+            day: 6,
+          },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1758,10 +1836,6 @@ export const yelpData = [
       address1: '812 S State St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.27149,
-      longitude: -83.74084,
     },
     hours: [
       {
@@ -1802,6 +1876,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1820,10 +1895,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2779549,
-      longitude: -83.7416061,
-    },
     hours: [
       {
         open: [
@@ -1858,6 +1929,7 @@ export const yelpData = [
             day: 5,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -1876,10 +1948,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2805564228967,
-      longitude: -83.7470998987556,
-    },
     hours: [
       {
         open: [
@@ -1919,123 +1987,7 @@ export const yelpData = [
             day: 6,
           },
         ],
-      },
-    ],
-  },
-  {
-    name: 'Afternoon Delight',
-    url:
-      'https://www.yelp.com/biz/afternoon-delight-ann-arbor-2?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media2.fl.yelpcdn.com/bphoto/HwdDapqjQgqeoDZ-hLZYXA/o.jpg',
-    ],
-    display_phone: '(734) 665-7513',
-    rating: 4.0,
-    price: '$$',
-    location: {
-      address1: '251 E Liberty St',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2796135,
-      longitude: -83.7467957,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '0800',
-            end: '1500',
-            day: 0,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 1,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 2,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 3,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 4,
-          },
-          {
-            start: '0800',
-            end: '1500',
-            day: 5,
-          },
-          {
-            start: '0830',
-            end: '1500',
-            day: 6,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: 'Vedge Cafe',
-    url:
-      'https://www.yelp.com/biz/vedge-cafe-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media2.fl.yelpcdn.com/bphoto/qV58l3ankT2q-VKjkD-euQ/o.jpg',
-    ],
-    display_phone: '(734) 929-4485',
-    rating: 4.5,
-    price: '$',
-    location: {
-      address1: '205 N Main',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2826,
-      longitude: -83.74882,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '1100',
-            end: '1900',
-            day: 1,
-          },
-          {
-            start: '1100',
-            end: '1900',
-            day: 2,
-          },
-          {
-            start: '1100',
-            end: '1900',
-            day: 3,
-          },
-          {
-            start: '1100',
-            end: '1900',
-            day: 4,
-          },
-          {
-            start: '1100',
-            end: '1800',
-            day: 5,
-          },
-          {
-            start: '1100',
-            end: '1600',
-            day: 6,
-          },
-        ],
+        is_open_now: true,
       },
     ],
   },
@@ -2054,10 +2006,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.28011,
-      longitude: -83.74819,
-    },
     hours: [
       {
         open: [
@@ -2097,6 +2045,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2115,10 +2064,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.274783,
-      longitude: -83.7333166,
-    },
     hours: [
       {
         open: [
@@ -2158,6 +2103,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2176,10 +2122,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2794900388918,
-      longitude: -83.7500317969716,
-    },
     hours: [
       {
         open: [
@@ -2219,6 +2161,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2237,10 +2180,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2793178,
-      longitude: -83.7500222,
-    },
     hours: [
       {
         open: [
@@ -2280,118 +2219,7 @@ export const yelpData = [
             day: 6,
           },
         ],
-      },
-    ],
-  },
-  {
-    name: 'Detroit Street Filling Station',
-    url:
-      'https://www.yelp.com/biz/detroit-street-filling-station-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media2.fl.yelpcdn.com/bphoto/xTG8JAyGPy2UTmYy5H7Lrw/o.jpg',
-    ],
-    display_phone: '(734) 224-2161',
-    rating: 4.0,
-    price: '$$',
-    location: {
-      address1: '300 Detroit St',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.28333,
-      longitude: -83.7463099,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '1100',
-            end: '2100',
-            day: 1,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 2,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 3,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 4,
-          },
-          {
-            start: '1100',
-            end: '2100',
-            day: 5,
-          },
-          {
-            start: '1000',
-            end: '1500',
-            day: 6,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    name: 'Broadway Cafe & Hoagie',
-    url:
-      'https://www.yelp.com/biz/broadway-cafe-and-hoagie-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media4.fl.yelpcdn.com/bphoto/jQEeKNlYIiTZPuIBYmTw0Q/o.jpg',
-    ],
-    display_phone: '(734) 769-8900',
-    rating: 4.5,
-    price: '$',
-    location: {
-      address1: '1139 Broadway St',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.290602,
-      longitude: -83.7367917,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '1030',
-            end: '2030',
-            day: 0,
-          },
-          {
-            start: '1030',
-            end: '2030',
-            day: 1,
-          },
-          {
-            start: '1030',
-            end: '2030',
-            day: 2,
-          },
-          {
-            start: '1030',
-            end: '2030',
-            day: 3,
-          },
-          {
-            start: '1030',
-            end: '2030',
-            day: 4,
-          },
-          {
-            start: '1030',
-            end: '2000',
-            day: 5,
-          },
-        ],
+        is_open_now: true,
       },
     ],
   },
@@ -2410,10 +2238,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2716217,
-      longitude: -83.7407532,
-    },
     hours: [
       {
         open: [
@@ -2453,6 +2277,60 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
+      },
+    ],
+  },
+  {
+    name: 'Broadway Cafe & Hoagie',
+    url:
+      'https://www.yelp.com/biz/broadway-cafe-and-hoagie-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media4.fl.yelpcdn.com/bphoto/jQEeKNlYIiTZPuIBYmTw0Q/o.jpg',
+    ],
+    display_phone: '(734) 769-8900',
+    rating: 4.5,
+    price: '$',
+    location: {
+      address1: '1139 Broadway St',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '1030',
+            end: '2030',
+            day: 0,
+          },
+          {
+            start: '1030',
+            end: '2030',
+            day: 1,
+          },
+          {
+            start: '1030',
+            end: '2030',
+            day: 2,
+          },
+          {
+            start: '1030',
+            end: '2030',
+            day: 3,
+          },
+          {
+            start: '1030',
+            end: '2030',
+            day: 4,
+          },
+          {
+            start: '1030',
+            end: '2000',
+            day: 5,
+          },
+        ],
+        is_open_now: true,
       },
     ],
   },
@@ -2470,10 +2348,6 @@ export const yelpData = [
       address1: '1327 S University Ave',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2750546783209,
-      longitude: -83.7325673550367,
     },
     hours: [
       {
@@ -2514,6 +2388,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2531,10 +2406,6 @@ export const yelpData = [
       address1: '301 E Liberty St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2796108,
-      longitude: -83.745947,
     },
     hours: [
       {
@@ -2575,6 +2446,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2592,10 +2464,6 @@ export const yelpData = [
       address1: '1643 S State St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.25849,
-      longitude: -83.73975,
     },
     hours: [
       {
@@ -2636,6 +2504,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2654,10 +2523,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.277368,
-      longitude: -83.749204,
-    },
     hours: [
       {
         open: [
@@ -2697,6 +2562,7 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
@@ -2715,10 +2581,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.2845916111551,
-      longitude: -83.7464769846905,
-    },
     hours: [
       {
         open: [
@@ -2783,67 +2645,7 @@ export const yelpData = [
             day: 6,
           },
         ],
-      },
-    ],
-  },
-  {
-    name: 'Tomukun Korean Barbeque',
-    url:
-      'https://www.yelp.com/biz/tomukun-korean-barbeque-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
-    photos: [
-      'https://s3-media3.fl.yelpcdn.com/bphoto/deYDOvPFDXd6IfTuMYUt1A/o.jpg',
-    ],
-    display_phone: '(734) 369-2602',
-    rating: 4.0,
-    price: '$$',
-    location: {
-      address1: '505 E Liberty St',
-      state: 'MI',
-      city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2795502,
-      longitude: -83.7427918,
-    },
-    hours: [
-      {
-        open: [
-          {
-            start: '1130',
-            end: '2200',
-            day: 0,
-          },
-          {
-            start: '1130',
-            end: '2200',
-            day: 1,
-          },
-          {
-            start: '1130',
-            end: '2200',
-            day: 2,
-          },
-          {
-            start: '1130',
-            end: '2200',
-            day: 3,
-          },
-          {
-            start: '1130',
-            end: '2200',
-            day: 4,
-          },
-          {
-            start: '1130',
-            end: '2200',
-            day: 5,
-          },
-          {
-            start: '1130',
-            end: '2200',
-            day: 6,
-          },
-        ],
+        is_open_now: false,
       },
     ],
   },
@@ -2862,10 +2664,6 @@ export const yelpData = [
       state: 'MI',
       city: 'Ann Arbor',
     },
-    coordinates: {
-      latitude: 42.27807,
-      longitude: -83.74241,
-    },
     hours: [
       {
         open: [
@@ -2905,31 +2703,33 @@ export const yelpData = [
             day: 6,
           },
         ],
+        is_open_now: true,
       },
     ],
   },
   {
-    name: 'Isalita',
+    name: 'Tomukun Korean Barbeque',
     url:
-      'https://www.yelp.com/biz/isalita-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+      'https://www.yelp.com/biz/tomukun-korean-barbeque-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
     photos: [
-      'https://s3-media3.fl.yelpcdn.com/bphoto/Kax_19qwZS5tAHhxs5WUsQ/o.jpg',
+      'https://s3-media3.fl.yelpcdn.com/bphoto/deYDOvPFDXd6IfTuMYUt1A/o.jpg',
     ],
-    display_phone: '(734) 213-7400',
+    display_phone: '(734) 369-2602',
     rating: 4.0,
     price: '$$',
     location: {
-      address1: '341 E Liberty St',
+      address1: '505 E Liberty St',
       state: 'MI',
       city: 'Ann Arbor',
-    },
-    coordinates: {
-      latitude: 42.2794618,
-      longitude: -83.7444065,
     },
     hours: [
       {
         open: [
+          {
+            start: '1130',
+            end: '2200',
+            day: 0,
+          },
           {
             start: '1130',
             end: '2200',
@@ -2947,20 +2747,74 @@ export const yelpData = [
           },
           {
             start: '1130',
-            end: '2300',
+            end: '2200',
             day: 4,
           },
           {
-            start: '1200',
-            end: '2300',
+            start: '1130',
+            end: '2200',
             day: 5,
           },
           {
-            start: '1200',
-            end: '2100',
+            start: '1130',
+            end: '2200',
             day: 6,
           },
         ],
+        is_open_now: true,
+      },
+    ],
+  },
+  {
+    name: 'Social House South U',
+    url:
+      'https://www.yelp.com/biz/social-house-south-u-ann-arbor?adjust_creative=cBOVQIbSUn7qj0jqNd2VTA&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=cBOVQIbSUn7qj0jqNd2VTA',
+    photos: [
+      'https://s3-media2.fl.yelpcdn.com/bphoto/CbzkijPTK4Z9gETaVzIwJA/o.jpg',
+    ],
+    display_phone: '(734) 882-2134',
+    rating: 3.5,
+    price: '$$',
+    location: {
+      address1: '1235 S University Ave',
+      state: 'MI',
+      city: 'Ann Arbor',
+    },
+    hours: [
+      {
+        open: [
+          {
+            start: '1100',
+            end: '2200',
+            day: 1,
+          },
+          {
+            start: '1100',
+            end: '2200',
+            day: 2,
+          },
+          {
+            start: '1100',
+            end: '2200',
+            day: 3,
+          },
+          {
+            start: '1100',
+            end: '0000',
+            day: 4,
+          },
+          {
+            start: '0900',
+            end: '0000',
+            day: 5,
+          },
+          {
+            start: '0900',
+            end: '1500',
+            day: 6,
+          },
+        ],
+        is_open_now: true,
       },
     ],
   },

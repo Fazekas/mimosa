@@ -27,9 +27,7 @@ export default class FoodListComponent extends Component {
         const reset = () => {
           const resetAction = StackActions.reset({
             index: 0,
-            actions: [
-              NavigationActions.navigate({ routeName: 'FoodSelection' }),
-            ],
+            actions: [NavigationActions.navigate({ routeName: 'Location' })],
           });
           this.props.navigation.dispatch(resetAction);
         };
@@ -87,7 +85,7 @@ export default class FoodListComponent extends Component {
                 width: null,
                 resizeMode: 'cover',
               }}
-              source={{ uri: food.image }}
+              source={food.image}
             />
           </View>
           <View

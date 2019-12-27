@@ -107,9 +107,7 @@ export default class FoodCardComponent extends Component {
               width: null,
               resizeMode: 'cover',
             }}
-            source={{
-              uri: this.props.item.image,
-            }}
+            source={this.props.item.image}
           />
           <Animated.View
             style={[
