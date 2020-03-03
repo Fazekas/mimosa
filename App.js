@@ -6,19 +6,32 @@
  * @flow
  */
 
-import React from 'react';
-import {createStackNavigator} from "react-navigation-stack";
-import {createAppContainer} from 'react-navigation';
-import LoginComponent from "./component/LoginComponent";
-import LocationComponent from "./component/LocationComponent";
-import FoodSelectionComponent from "./component/FoodSelectionComponent";
+import React, {Component} from 'react';
+import {AppContainer} from './component/NavigationComponent';
+import {Platform} from 'react-native';
+import {ApolloClient, HttpLink, InMemoryCache} from 'apollo-boost';
+import {ApolloProvider} from '@apollo/react-hooks';
 
-const MainNavigator = createStackNavigator({
-  Login: {screen: LoginComponent},
-  Location: {screen: LocationComponent},
-  FoodSelection: {screen: FoodSelectionComponent},
+export const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: Platform.select({
+      ios: 'https://api.yelp.com/v3/graphql',
+      android: 'https://api.yelp.com/v3/graphql',
+    }),
+    headers: {
+      Authorization:
+        'Bearer qpT_z7Gmx7cplj0DCUEh6oz-b_3eL_qyiAYT85x6_6Y9tZN6NCh9DxYjkztRpylATmo1u8bj6SURf6gJpNppMfkReuelTpTz4ZcAayU1dEyZlvKDsCH5KC-qGbjFXXYx',
+    },
+  }),
 });
 
-const App = createAppContainer(MainNavigator);
-
-export default App;
+export default class App extends Component {
+  render() {
+    return (
+      <ApolloProvider client={client}>
+        <AppContainer />
+      </ApolloProvider>
+    );
+  }
+}
