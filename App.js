@@ -6,11 +6,11 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import { AppContainer } from './component/NavigationComponent';
-import { Platform } from 'react-native';
-import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
-import { ApolloProvider } from '@apollo/react-hooks';
+import React, {Component} from 'react';
+import {AppContainer} from './component/NavigationComponent';
+import {Platform} from 'react-native';
+import {ApolloClient, HttpLink, InMemoryCache} from 'apollo-boost';
+import {ApolloProvider} from '@apollo/react-hooks';
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),

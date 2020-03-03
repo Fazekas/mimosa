@@ -1,13 +1,13 @@
 // Used https://moduscreate.com/blog/animated_drag_and_drop_with_react_native/ for animations
 import React from 'react';
-import { View, Text, Animated, ActivityIndicator } from 'react-native';
-import { Overlay } from 'react-native-elements';
-import { searchQueryFunction } from './GraphQLQueries';
+import {View, Text, Animated, ActivityIndicator} from 'react-native';
+import {Overlay} from 'react-native-elements';
+import {searchQueryFunction} from './GraphQLQueries';
 import FoodCardComponent from './FoodCardComponent';
-import { yelpData } from './SampleData';
+import {yelpData} from './SampleData';
 import ToolTipComponent from './ToolTipComponent';
 import AsyncStorage from '@react-native-community/async-storage';
-import { client } from '../App';
+import {client} from '../App';
 
 const MIMOSA_FTU_KEY = 'MimosaIsFTU';
 export default class FoodSelectionComponent extends React.Component {
@@ -25,7 +25,7 @@ export default class FoodSelectionComponent extends React.Component {
     };
   }
 
-  state = { locationText: '', isLoading: false };
+  state = {locationText: '', isLoading: false};
   FAKE_DATA = false;
 
   componentDidMount() {
@@ -33,7 +33,7 @@ export default class FoodSelectionComponent extends React.Component {
       let foodArray = yelpData.map((foodItem, index) => {
         foodItem['id'] = index;
         if (foodItem.photos) {
-          foodItem['image'] = { uri: foodItem.photos[0] };
+          foodItem['image'] = {uri: foodItem.photos[0]};
         } else {
           foodItem['image'] = require('../assets/img/No-Image-Found.png');
         }
@@ -75,7 +75,7 @@ export default class FoodSelectionComponent extends React.Component {
               (foodItem, index) => {
                 foodItem['id'] = index;
                 if (foodItem.photos) {
-                  foodItem['image'] = { uri: foodItem.photos[0] };
+                  foodItem['image'] = {uri: foodItem.photos[0]};
                 } else {
                   foodItem[
                     'image'
@@ -103,7 +103,7 @@ export default class FoodSelectionComponent extends React.Component {
           })
           .catch(error => {
             console.log(error);
-            this.setState({ hasError: true });
+            this.setState({hasError: true});
           });
       }
     }
@@ -119,7 +119,7 @@ export default class FoodSelectionComponent extends React.Component {
   };
 
   storeData = async () => {
-    this.setState({ isFTU: false });
+    this.setState({isFTU: false});
     try {
       await AsyncStorage.setItem(MIMOSA_FTU_KEY, 'true');
     } catch (e) {
@@ -170,11 +170,11 @@ export default class FoodSelectionComponent extends React.Component {
       if (this.state.foodArray.length > 5) {
         renderedArray = renderedArray.concat(foodArray.slice(0, 5));
         foodArray = foodArray.slice(5);
-        this.setState({ renderedArray: renderedArray, foodArray: foodArray });
+        this.setState({renderedArray: renderedArray, foodArray: foodArray});
       } else {
         renderedArray.concat(foodArray);
         foodArray = [];
-        this.setState({ renderedArray: renderedArray, foodArray: foodArray });
+        this.setState({renderedArray: renderedArray, foodArray: foodArray});
       }
     }
   }
@@ -205,7 +205,7 @@ export default class FoodSelectionComponent extends React.Component {
             text={
               'Swipe left when you are done to see more details on the food you liked'
             }
-            containerStyle={{ width: 150, alignSelf: 'flex-end' }}
+            containerStyle={{width: 150, alignSelf: 'flex-end'}}
           />
           <ToolTipComponent
             direction="bottom"
@@ -226,8 +226,8 @@ export default class FoodSelectionComponent extends React.Component {
             alignItems: 'center',
             backgroundColor: '#dcdcdc',
           }}>
-          <Text style={{ fontSize: 24 }}>Uh Oh!</Text>
-          <Text style={{ fontSize: 16 }}>
+          <Text style={{fontSize: 24}}>Uh Oh!</Text>
+          <Text style={{fontSize: 16}}>
             Looks like there was an error. Please try again
           </Text>
         </View>
@@ -245,7 +245,7 @@ export default class FoodSelectionComponent extends React.Component {
       );
     } else {
       return (
-        <View style={{ flex: 1, backgroundColor: '#dcdcdc' }}>
+        <View style={{flex: 1, backgroundColor: '#dcdcdc'}}>
           {this.renderOverlay()}
           {this.state.renderedArray
             .map(item => (
